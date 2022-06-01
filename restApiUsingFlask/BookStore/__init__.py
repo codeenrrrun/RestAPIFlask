@@ -214,7 +214,7 @@ def searchBookByAuthor(author_name):
                     Final_data.append(bookObj|{"Author Name: ":authorObj['name']})
     return  {'message': 'Book Detail of given partial Author Name', 'data': Final_data}, 200
 
-@app.route("/searchBookByAuthor/<string:author_name>/<string:title>")
+@app.route("/searchBookByAuthorAndTitle/<string:author_name>/<string:title>")
 def searchBookByAuthorAndTitle(author_name,title):
     shelf = get_books_db()
     Final_data = []
